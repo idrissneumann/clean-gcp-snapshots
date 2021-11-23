@@ -35,7 +35,7 @@ perform_clean() {
 
   echo "Cleaning with P_ENV=${P_ENV}, P_NAME=${P_NAME} and P_LIMIT=${P_LIMIT}"
 
-  gcloud compute snapshots list --filter="${P_ENV}-${P_NAME}" --sort-by creationTimestamp --limit "${P_LIMIT}"|while read snapshot_id tash; do
+  gcloud compute snapshots list --filter="${P_ENV}-${P_NAME}" --sort-by creationTimestamp --limit "${P_LIMIT}"|while read -r snapshot_id trash; do
       [[ $snapshot_id == "NAME" ]] && continue
       disk="$(gcloud compute snapshots describe ${snapshot_id}|awk -F '(: |/)' '($1 == "sourceDisk"){print $NF}')"
       timestamp="$(gcloud compute snapshots describe ${snapshot_id}|awk -F ': ' '($1 == "creationTimestamp"){print $NF}')"
