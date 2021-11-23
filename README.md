@@ -1,8 +1,20 @@
 # Cleaning GCP snapshots of VMs
 
+
 This script can be used to clean old snapshots. Sometimes it's usefull if you don't have set a retention policy and you have to wait before applying a new one (using terraform or whatever).
 
 Beware: keep only one snapshot per disk!
+
+## Table of content
+
+[[_TOC_]]
+
+## Git repositories
+
+* Main repo: https://gitlab.comwork.io/oss/clean-gcp-snapshots
+* Github mirror: https://github.com/idrissneumann/clean-gcp-snapshots.git
+* Gitlab mirror: https://gitlab.com/ineumann/clean-gcp-snapshots.git
+## Getting started
 
 You can run it like that:
 
