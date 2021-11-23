@@ -33,7 +33,7 @@ limit_set() {
 perform_clean() {
   [[ ! $P_ENV ]] || [[ ! $P_NAME ]] || [[ ! $P_LIMIT ]] && error
 
-  echo "Cleaning with P_ENV=${P_ENV}, P_NAME=${P_NAME}, P_LIMIT=${P_LIMIT} and P_MAX_KEEP=${P_MAX_KEEP}"
+  echo "Cleaning with P_ENV=${P_ENV}, P_NAME=${P_NAME} and P_LIMIT=${P_LIMIT}"
 
   gcloud compute snapshots list --filter="${P_ENV}-${P_NAME}" --sort-by creationTimestamp --limit "${P_LIMIT}"|while read snapshot_id tash; do
       [[ $snapshot_id == "NAME" ]] && continue
