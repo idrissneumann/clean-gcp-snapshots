@@ -44,9 +44,11 @@ perform_clean() {
   function push(A,B) { 
     A[length(A)+1] = B 
   }
+  
   BEGIN{
     delete todel[0]
   }
+
   {
     if(($2 not in snaps) or $3 > times[$2]) {
       if($2 in snaps) {
