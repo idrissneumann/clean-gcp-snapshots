@@ -14,6 +14,8 @@ Beware: keep only one snapshot per disk!
 * Main repo: https://gitlab.comwork.io/oss/clean-gcp-snapshots
 * Github mirror: https://github.com/idrissneumann/clean-gcp-snapshots.git
 * Gitlab mirror: https://gitlab.com/ineumann/clean-gcp-snapshots.git
+* Bitbucket mirror: https://bitbucket.org/idrissneumann/clean-gcp-snapshots
+
 ## Getting started
 
 You can run it like that:
